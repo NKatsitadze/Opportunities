@@ -1,0 +1,41 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background: #e5e5e5;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #161616;
+}
+
+.background {
+  backdrop-filter: blur(1.5px);
+  background: rgba(57, 57, 57, 0.5);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.range {
+  width: 8.5rem;
+}
