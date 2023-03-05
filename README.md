@@ -11,4 +11,4 @@ rendering client's history records of different time periods.
 Implemented next and previous buttons in card component, so the user can
 check other client's data without closing the window.
 And finally made it responsive for all devices, from small phones to large
-displays. 
+displays.
