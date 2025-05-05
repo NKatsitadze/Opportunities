@@ -56,7 +56,7 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
     <React.Fragment>
       <CardContent
         sx={{
-          bgcolor: "#e5e5e5",
+          bgcolor: "#EBEBF0",
           display: "flex",
           flexDirection: "column",
           gap: { md: 0, xs: 0.5 }
@@ -78,11 +78,11 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
           sx={{
             bgcolor:
               objData.stage.at(0) < 4
-                ? "#FC5753"
+                ? "#c5554b"
                 : objData.stage.at(0) >= 4 && objData.stage.at(0) < 8
-                ? "#FDBC40"
+                ? "#F4B740"
                 : objData.stage.at(0) >= 8
-                ? "#36C84B"
+                ? "#81C995"
                 : null,
             px: 1,
             borderRadius: 1
@@ -113,12 +113,12 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
               fontWeight: "bold",
               bgcolor:
                 objData.XTier.at(0) < 3
-                  ? "#FC5753"
+                  ? "#c5554b"
                   : objData.XTier.at(0) >= 3 &&
                     objData.XTier.at(0) <= 4
-                  ? "#FDBC40"
+                  ? "#F4B740"
                   : objData.XTier.at(0) > 4
-                  ? "#36C84B"
+                  ? "#81C995"
                   : null,
               borderRadius: 1,
               px: 1
@@ -131,12 +131,12 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
             sx={{
               bgcolor:
                 objData.repProbability < 0.4
-                  ? "#FC5753"
+                  ? "#c5554b"
                   : objData.repProbability >= 0.4 &&
                     objData.repProbability < 0.8
-                  ? "#FDBC40"
+                  ? "#F4B740"
                   : objData.repProbability >= 0.8
-                  ? "#36C84B"
+                  ? "#81C995"
                   : null,
               justifySelf: "center",
               borderRadius: 1,
@@ -150,12 +150,12 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
             sx={{
               bgcolor:
                 objData.XProbability < 0.4
-                  ? "#FC5753"
+                  ? "#c5554b"
                   : objData.XProbability >= 0.4 &&
                     objData.XProbability < 0.8
-                  ? "#FDBC40"
+                  ? "#F4B740"
                   : objData.XProbability >= 0.8
-                  ? "#36C84B"
+                  ? "#81C995"
                   : null,
               justifySelf: "center",
               borderRadius: 1,
@@ -186,17 +186,10 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
         pb: 1.5,
         overflow: "hidden",
         position: "fixed",
-        left: {
-          md: "50%",
-          xs: "0%"
-        },
-        top: {
-          lg: "7%",
-          md: "5%",
-          xs: "0%"
-        },
+        left: "50%",
+        top: "50%",
         transform: {
-          md: "translateX(-50%)",
+          md: "translate(-50%, -50%)",
           xs: "translateX(0)"
         },
         border: "none",
@@ -215,7 +208,7 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
           xs: "100%"
         },
         overflowY: "auto",
-        bgcolor: "#e5e5e5"
+        bgcolor: "#EBEBF0"
       }}
     >
       <Box
@@ -283,9 +276,6 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
             )}
             {!objData.probabilityHistory ? null : (
               <Box sx={{ mt: { md: 0, xs: 2 } }}>
-                {/* Mui input slider came with unfixed bug (rerendering too muuch on onChange), I searched everywhere for 
-                solution but people have been seeking that for years... 
-                so I used basic slider */}
                 <input
                   style={{ width: "12rem" }}
                   className="range"

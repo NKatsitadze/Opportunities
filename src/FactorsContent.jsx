@@ -26,7 +26,7 @@ const FactorsContent = function ({ increases, decreases }) {
             mt: 0.4,
             bgcolor:
               each.weight.value === 1
-                ? "#36C84B"
+                ? "#81C995"
                 : each.weight.value === 2
                 ? "#00B273"
                 : each.weight.value === 3
@@ -64,7 +64,7 @@ const FactorsContent = function ({ increases, decreases }) {
                 : each.weight.value === -2
                 ? "#FF7773"
                 : each.weight.value === -3
-                ? "#FC5753"
+                ? "#c5554b"
                 : ""
           }}
         ></Box>
@@ -82,14 +82,16 @@ const FactorsContent = function ({ increases, decreases }) {
         display: "flex",
         flexDirection: "column",
         gap: 2,
-        pl: { sm: 0, xs: 1 },
+        boxShadow: "0px 6px 14px -6px rgba(24, 39, 75, 0.12),0px 10px 32px -4px rgba(24, 39, 75, 0.1)",
+        padding: "6px 10px",
+        borderRadius: "6px",
         mt: {
           lg: 3,
           md: 1,
           sm: 2
         },
         width: {
-          md: "60%",
+          md: "70%",
           sm: "85%"
         }
       }}

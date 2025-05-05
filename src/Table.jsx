@@ -73,12 +73,17 @@ export default function BasicTable() {
                 sx={{
                   display: "grid",
                   gridTemplateColumns: {
-                    md: "repeat(8,1.5fr)",
-                    sm: "repeat(4,3fr)",
-                    xs: "repeat(4, 1fr)"
+                    md: "1.5fr 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr 1.5fr",
+                    sm: "1fr 1fr 1fr 1.5fr",
+                    xs: "1fr 1fr 1fr 1.5fr",
                   },
                   alignItems: "center",
-                  justifyItems: "center"
+                  "& > *": {
+                    textAlign: "start",
+                    px: 1,
+                    py: 1.5
+                  },
+                  justifyItems: "start"
                 }}
               >
                 <Grid item>
@@ -186,6 +191,12 @@ export default function BasicTable() {
               </Grid>
             </TableRow>
           </TableHead>
+
+
+
+
+
+
           <TableBody>
             {data.map((row) => (
               <TableRow
@@ -198,14 +209,14 @@ export default function BasicTable() {
                   "&": { cursor: "pointer" },
                   display: "grid",
                   gridTemplateColumns: {
-                    md: "repeat(8,1.5fr)",
-                    sm: "repeat(4,3fr)",
-                    xs: "repeat(4, 1fr)"
+                    md: "1.5fr 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr 1.5fr",
+                    sm: "1fr 1fr 1fr 1.5fr",
+                    xs: "1fr 1fr 1fr 1.5fr",
                   },
-                  justifyItems: "center",
+                  justifyItems: "start",
                   alignItems: "center",
                   "& > *": {
-                    textAlign: "center",
+                    textAlign: "start",
                     px: 1,
                     py: 1.5
                   },
@@ -225,12 +236,12 @@ export default function BasicTable() {
                     sx={{
                       bgcolor:
                         row.XTier.at(0) < 3
-                          ? "#FC5753"
+                          ? "#c5554b"
                           : row.XTier.at(0) >= 3 &&
                             row.XTier.at(0) <= 4
-                          ? "#FDBC40"
+                          ? "#F4B740"
                           : row.XTier.at(0) > 4
-                          ? "#36C84B"
+                          ? "#81C995"
                           : null,
                       width: "2.8rem",
                       margin: "0 auto",
@@ -239,7 +250,6 @@ export default function BasicTable() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      fontWeight: "bold",
                       textAlign: "center"
                     }}
                   >
@@ -252,18 +262,17 @@ export default function BasicTable() {
                     sx={{
                       background:
                         row.repProbability < 0.4
-                          ? "#FC5753"
+                          ? "#c5554b"
                           : row.repProbability >= 0.4 &&
                             row.repProbability < 0.8
-                          ? "#FDBC40"
+                          ? "#F4B740"
                           : row.repProbability >= 0.8
-                          ? "#36C84B"
+                          ? "#81C995"
                           : null,
                       width: "2.5rem",
                       margin: "0 auto",
                       padding: "0.2rem 0.4rem",
                       borderRadius: "4px",
-                      fontWeight: "bold",
                       textAlign: "center"
                     }}
                   >
@@ -275,39 +284,37 @@ export default function BasicTable() {
                     sx={{
                       background:
                         row.XProbability < 0.4
-                          ? "#FC5753"
+                          ? "#c5554b"
                           : row.XProbability >= 0.4 &&
                             row.XProbability < 0.8
-                          ? "#FDBC40"
+                          ? "#F4B740"
                           : row.XProbability >= 0.8
-                          ? "#36C84B"
+                          ? "#81C995"
                           : null,
                       width: "2.5rem",
                       margin: "0 auto",
                       padding: "0.2rem 0.4rem",
                       borderRadius: "4px",
-                      fontWeight: "bold",
                       textAlign: "center"
                     }}
                   >
                     {row.XProbability}
                   </Box>
                 </TableCell>
-                <TableCell sx={{ border: "none" }}>
+                <TableCell sx={{ border: "none", width: "100%" }} >
                   <Box
                     style={{
                       background:
                         row.stage.at(0) < 4
-                          ? "#FC5753"
+                          ? "#c5554b"
                           : row.stage.at(0) >= 4 && row.stage.at(0) < 8
-                          ? "#FDBC40"
+                          ? "#F4B740"
                           : row.stage.at(0) >= 8
-                          ? "#36C84B"
+                          ? "#81C995"
                           : null,
                       margin: "0 auto",
                       padding: "0.2rem 0.4rem",
                       borderRadius: "4px",
-                      fontWeight: "bold",
                       textAlign: "center"
                     }}
                   >
@@ -319,6 +326,8 @@ export default function BasicTable() {
           </TableBody>
         </Table>
       </TableContainer>
+
+
       {popup ? <Background setPopup={setPopup} /> : null}
       {popup ? (
         <Card
