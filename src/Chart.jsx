@@ -25,7 +25,7 @@ const Chart = function ({ history, weekNumber }) {
   return (
     <ResponsiveContainer width="100%" height="100%">
       {!history ? (
-        <Typography sx={{ color: "#c5554b" }}>
+        <Typography sx={{ color: "#e95b4d" }}>
           <br /> <br /> No Data, <br /> Chart Rendering Stopped
         </Typography>
       ) : (
@@ -48,7 +48,7 @@ const Chart = function ({ history, weekNumber }) {
             dataKey="RepProb"
             fill={
               repProb < 0.4
-                ? "#c5554b"
+                ? "#e95b4d"
                 : repProb >= 0.4 && repProb < 0.8
                 ? "#F4B740"
                 : repProb >= 0.8
@@ -61,7 +61,7 @@ const Chart = function ({ history, weekNumber }) {
             dataKey="PxProb"
             fill={
               pxProb < 0.4
-                ? "#c5554b"
+                ? "#e95b4d"
                 : pxProb >= 0.4 && pxProb < 0.8
                 ? "#F4B740"
                 : pxProb >= 0.8

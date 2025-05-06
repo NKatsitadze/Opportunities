@@ -43,9 +43,9 @@ const GraphComponent = function ({ objData }) {
     { name: "Group C", value: decrease3values?.length }
   ];
 
-  const COLORS = ["#00B273", "#c5554b"];
+  const COLORS = ["#00B273", "#e95b4d"];
   const COLORS2 = ["#81C995", "#00B273", "#009988"];
-  const COLORS3 = ["#FF9D9A", "#FF7773", "#c5554b"];
+  const COLORS3 = ["#FF9D9A", "#FF7773", "#e95b4d"];
 
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({
@@ -143,7 +143,7 @@ const GraphComponent = function ({ objData }) {
               {totalIncreaseWins ? totalIncreaseWins.length : "0"} Increasing
             </span>{" "}
             <br /> and{" "}
-            <span style={{ color: "#c5554b" }}>
+            <span style={{ color: "#e95b4d" }}>
               {totalDecreaseWins ? totalDecreaseWins.length : "0"} Decreasing
             </span>{" "}
             <br />
@@ -351,7 +351,7 @@ const GraphComponent = function ({ objData }) {
                   height: "1rem",
                   width: "1rem",
                   borderRadius: "50%",
-                  bgcolor: "#c5554b"
+                  bgcolor: "#e95b4d"
                 }}
               ></Box>
               <Typography sx={{ fontWeight: "bold" }} variant="body2">

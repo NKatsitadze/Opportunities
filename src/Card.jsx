@@ -78,7 +78,7 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
           sx={{
             bgcolor:
               objData.stage.at(0) < 4
-                ? "#c5554b"
+                ? "#e95b4d"
                 : objData.stage.at(0) >= 4 && objData.stage.at(0) < 8
                 ? "#F4B740"
                 : objData.stage.at(0) >= 8
@@ -113,7 +113,7 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
               fontWeight: "bold",
               bgcolor:
                 objData.XTier.at(0) < 3
-                  ? "#c5554b"
+                  ? "#e95b4d"
                   : objData.XTier.at(0) >= 3 &&
                     objData.XTier.at(0) <= 4
                   ? "#F4B740"
@@ -131,7 +131,7 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
             sx={{
               bgcolor:
                 objData.repProbability < 0.4
-                  ? "#c5554b"
+                  ? "#e95b4d"
                   : objData.repProbability >= 0.4 &&
                     objData.repProbability < 0.8
                   ? "#F4B740"
@@ -150,7 +150,7 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
             sx={{
               bgcolor:
                 objData.XProbability < 0.4
-                  ? "#c5554b"
+                  ? "#e95b4d"
                   : objData.XProbability >= 0.4 &&
                     objData.XProbability < 0.8
                   ? "#F4B740"
@@ -294,7 +294,7 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
       <GraphComponent objData={objData} />
       <Box
         sx={{
-          position: "absolute",
+          position: "fixed",
           right: "0.2rem",
           top: "0.2rem",
           display: "flex",

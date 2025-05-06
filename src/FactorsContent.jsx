@@ -64,7 +64,7 @@ const FactorsContent = function ({ increases, decreases }) {
                 : each.weight.value === -2
                 ? "#FF7773"
                 : each.weight.value === -3
-                ? "#c5554b"
+                ? "#e95b4d"
                 : ""
           }}
         ></Box>
