@@ -186,11 +186,16 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
         pb: 1.5,
         overflow: "hidden",
         position: "fixed",
-        left: "50%",
-        top: "50%",
+        left: {
+          md: "50%",
+          xs: "0"
+        },
+        top: {
+          md: "50%",
+          xs: "0"
+        },
         transform: {
           md: "translate(-50%, -50%)",
-          xs: "translateX(0)"
         },
         border: "none",
         boxShadow: "none",
@@ -199,11 +204,7 @@ const CardComponent = function ({ id, data, nextRow, previousRow, setPopup }) {
           md: "90%",
           xs: "100%"
         },
-        minHeight: {
-          md: "70%",
-          xs: "100%"
-        },
-        maxHeight: {
+        height: {
           md: "90%",
           xs: "100%"
         },
